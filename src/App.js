@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Basic from './components/Basic';
+import Controlled from './components/Controlled';
+import Disabled from './components/Disabled';
+import Invalid from './components/Invalid';
+import Resize from './components/Resize';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{
+      display: "flex",
+      flexDirection: "column",
+      maxWidth: "400px",
+      gap: "12px",
+      margin: "auto",
+      padding: "40px"
+    }}>
+      <Basic/>
+      <Resize/>
+      <Controlled/>
+      <Disabled/>
+      <Invalid/>
+      
     </div>
   );
 }
